@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.frankzhou.lottery.backend.mapper.UserMapper">
+
+    <resultMap id="activityMap" type="com.frankzhou.lottery.backend.entity.User">
+        <id column="id" property="id" javaType="java.lang.Long"></id>
+        <result column="account" property="account" javaType="java.lang.String"></result>
+        <result column="password" property="password" javaType="java.lang.String"></result>
+        <result column="phone" property="password" javaType="java.lang.String"></result>
+        <result column="email" property="email" javaType="java.lang.String"></result>
+        <result column="create_time" property="createTime" javaType="java.time.LocalDateTime"></result>
+        <result column="update_time" property="updateTime" javaType="java.time.LocalDateTime"></result>
+    </resultMap>
+
+    <sql id="activityColumn">
+        `account`,
+        `password`,
+        `phone`,
+        `email`,
+        `create_time`,
+        `update_time`,
+    </sql>
+
+
+</mapper>
